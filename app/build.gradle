@@ -18,7 +18,7 @@ android {
         }
     }
     //设置编译JDK为1.8
-    compileOptions{
+    compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
