@@ -22,8 +22,8 @@ public class SplashActivity extends AppCompatActivity {
     };
 
     private void next() {
-        //Intent intent = new Intent(this, LoginActivity.class);
-        //startActivity(intent);
+        Intent intent = new Intent(this, loginActivity.class);
+        startActivity(intent);
         //关闭当前界面
         finish();
     }
