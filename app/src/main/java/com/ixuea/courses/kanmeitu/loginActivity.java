@@ -12,11 +12,13 @@ import android.widget.Toast;
 
 import com.ixuea.courses.kanmeitu.util.Constants;
 import com.ixuea.courses.kanmeitu.util.RegexUtil;
+import com.ixuea.courses.kanmeitu.util.SharePreferencesUtil;
 
 public class loginActivity extends AppCompatActivity implements View.OnClickListener {
 
     private EditText et_username;
     private EditText et_password;
+    private SharePreferencesUtil sp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +30,8 @@ public class loginActivity extends AppCompatActivity implements View.OnClickList
         Button bt_login = findViewById(R.id.bt_login);
 
         bt_login.setOnClickListener(this);
+
+        sp = SharePreferencesUtil.getInstance(getApplicationContext());
     }
 
     @Override
@@ -71,6 +75,7 @@ public class loginActivity extends AppCompatActivity implements View.OnClickList
         //我们这里就简单实现，将密码和用户名都写在到本地了
        if (Constants.USERNAME.equals(username)&& Constants.PASSWORD.equals(password)){
            //登录成功，进入首页
+           sp.setLogin(true);
 
            Intent intent=new Intent(this,MainActivity.class);
            startActivity(intent);
