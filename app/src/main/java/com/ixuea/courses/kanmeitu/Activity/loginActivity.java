@@ -1,4 +1,4 @@
-package com.ixuea.courses.kanmeitu;
+package com.ixuea.courses.kanmeitu.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -10,6 +10,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.ixuea.courses.kanmeitu.MainActivity;
+import com.ixuea.courses.kanmeitu.R;
 import com.ixuea.courses.kanmeitu.util.Constants;
 import com.ixuea.courses.kanmeitu.util.RegexUtil;
 import com.ixuea.courses.kanmeitu.util.SharePreferencesUtil;
@@ -77,7 +79,7 @@ public class loginActivity extends AppCompatActivity implements View.OnClickList
            //登录成功，进入首页
            sp.setLogin(true);
 
-           Intent intent=new Intent(this,MainActivity.class);
+           Intent intent=new Intent(this, MainActivity.class);
            startActivity(intent);
            //关闭当前页面
            finish();

@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.ixuea.courses.kanmeitu.Activity.loginActivity;
 import com.ixuea.courses.kanmeitu.util.SharePreferencesUtil;
 
 public class MainActivity extends AppCompatActivity {

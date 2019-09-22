@@ -1,4 +1,4 @@
-package com.ixuea.courses.kanmeitu;
+package com.ixuea.courses.kanmeitu.Activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,9 +9,10 @@ import android.os.Handler;
 import android.os.Message;
 import android.view.WindowManager;
 
+import com.ixuea.courses.kanmeitu.Activity.loginActivity;
+import com.ixuea.courses.kanmeitu.MainActivity;
+import com.ixuea.courses.kanmeitu.R;
 import com.ixuea.courses.kanmeitu.util.SharePreferencesUtil;
-
-import javax.security.auth.login.LoginException;
 
 public class SplashActivity extends AppCompatActivity {
     //延时3秒的handler包
@@ -33,7 +34,7 @@ public class SplashActivity extends AppCompatActivity {
             intent = new Intent(this, MainActivity.class);
         }else {
             //否则跳转到登录界面
-            intent= new Intent(this,loginActivity.class);
+            intent= new Intent(this, loginActivity.class);
         }
 
         startActivity(intent);
