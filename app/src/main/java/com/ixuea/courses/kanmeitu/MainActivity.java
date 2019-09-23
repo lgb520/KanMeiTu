@@ -1,10 +1,12 @@
 package com.ixuea.courses.kanmeitu;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.GridLayout;
 
 import com.ixuea.courses.kanmeitu.Activity.BaseActivity;
 import com.ixuea.courses.kanmeitu.Activity.loginActivity;
@@ -18,6 +20,11 @@ public class MainActivity extends BaseActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        RecyclerView rv=findViewById(R.id.rv);
+        rv.setHasFixedSize(true);
+
+        GridLayout layoutManager = new GridLayout(this, 2);
+        rv.setLayoutManager(layoutManager);
 
     }
 
