@@ -16,11 +16,12 @@ import com.ixuea.courses.kanmeitu.util.Constants;
 import com.ixuea.courses.kanmeitu.util.RegexUtil;
 import com.ixuea.courses.kanmeitu.util.SharePreferencesUtil;
 
-public class loginActivity extends AppCompatActivity implements View.OnClickListener {
+public class loginActivity extends BaseActivity implements View.OnClickListener {
 
     private EditText et_username;
     private EditText et_password;
-    private SharePreferencesUtil sp;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +34,6 @@ public class loginActivity extends AppCompatActivity implements View.OnClickList
 
         bt_login.setOnClickListener(this);
 
-        sp = SharePreferencesUtil.getInstance(getApplicationContext());
     }
 
     @Override

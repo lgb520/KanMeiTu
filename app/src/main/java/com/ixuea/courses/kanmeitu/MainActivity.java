@@ -6,19 +6,19 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.ixuea.courses.kanmeitu.Activity.BaseActivity;
 import com.ixuea.courses.kanmeitu.Activity.loginActivity;
 import com.ixuea.courses.kanmeitu.util.SharePreferencesUtil;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity{
 
-    private SharePreferencesUtil sp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        sp = SharePreferencesUtil.getInstance((getApplicationContext()));
+
     }
 
     public void onlogoutCLick(View view) {

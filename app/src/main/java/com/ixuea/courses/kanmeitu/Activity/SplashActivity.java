@@ -14,7 +14,7 @@ import com.ixuea.courses.kanmeitu.MainActivity;
 import com.ixuea.courses.kanmeitu.R;
 import com.ixuea.courses.kanmeitu.util.SharePreferencesUtil;
 
-public class SplashActivity extends AppCompatActivity {
+public class SplashActivity extends BaseActivity {
     //延时3秒的handler包
     private Handler handler=new Handler(){
         @Override
@@ -23,7 +23,6 @@ public class SplashActivity extends AppCompatActivity {
             next();
         }
     };
-    private SharePreferencesUtil sp;
 
     private void next() {
 
@@ -47,7 +46,6 @@ public class SplashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
-        sp = SharePreferencesUtil.getInstance(getApplicationContext());
 
         //去除状态栏
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
