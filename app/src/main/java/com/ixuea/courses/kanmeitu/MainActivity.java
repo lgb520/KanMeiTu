@@ -1,6 +1,7 @@
 package com.ixuea.courses.kanmeitu;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
@@ -23,8 +24,9 @@ public class MainActivity extends BaseActivity{
         RecyclerView rv=findViewById(R.id.rv);
         rv.setHasFixedSize(true);
 
-        GridLayout layoutManager = new GridLayout(this, 2);
+        GridLayoutManager layoutManager = new GridLayoutManager(this,2);
         rv.setLayoutManager(layoutManager);
+
 
     }
 
