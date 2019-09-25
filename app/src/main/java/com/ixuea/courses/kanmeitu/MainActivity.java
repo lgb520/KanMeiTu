@@ -11,10 +11,16 @@ import android.widget.GridLayout;
 
 import com.ixuea.courses.kanmeitu.Activity.BaseActivity;
 import com.ixuea.courses.kanmeitu.Activity.loginActivity;
+import com.ixuea.courses.kanmeitu.adapter.ImageAdapter;
+import com.ixuea.courses.kanmeitu.domain.Image;
 import com.ixuea.courses.kanmeitu.util.SharePreferencesUtil;
+
+import java.util.ArrayList;
 
 public class MainActivity extends BaseActivity{
 
+
+    private Intent intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +33,14 @@ public class MainActivity extends BaseActivity{
         GridLayoutManager layoutManager = new GridLayoutManager(this,2);
         rv.setLayoutManager(layoutManager);
 
+        ArrayList<Image> datas = new ArrayList<>();
+        for (int i=0;i<100;i++){
+            datas.add(new Image(""));
+        }
+        ImageAdapter adapter = new ImageAdapter(this);
+        rv.setAdapter(adapter);
+
+        adapter.setData(datas);
 
     }
 
